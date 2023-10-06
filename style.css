@@ -12,9 +12,6 @@
     /* cursor: pointer; */
     scale: 1.05;
     transition: all 0.2s;
-
-
-
 }
 
 .header{
@@ -38,7 +35,15 @@
     flex-direction: row;
     list-style: none;
     gap: 20px;
+    /* font-size: 14px;
+    font-weight: 500; */
+    
 
+}
+
+.nav-items ul a{
+    text-decoration: none;
+    color: black;
 }
 
 .nav-items ul li:hover{
@@ -68,6 +73,14 @@
    
 }
 
+.card-shimmer{
+    width: 200px;
+    margin: 10px;
+    background-color: rgb(50, 138, 173);
+    height: 180px;
+    border: 0.5px solid #888;
+}
+
 .card:hover{
     scale: 0.97;
     transition: all 0.2s;
@@ -88,6 +101,12 @@ body{
 
 .details h3{
     color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 5px;
+
+
 }
 
 .details p{
@@ -117,13 +136,19 @@ body{
     gap: 5px;
 }
 
+.About{
+    min-height: 73vh;
+}
+
 
 .resturant-list{
     display: flex;
     flex-wrap: wrap;
     width: 90%;
     margin: auto;
+    min-height: 65.5vh;
 }
+
 
 .footer{
     text-align: center;
@@ -132,9 +157,9 @@ body{
     border-top: 1px solid #888;
     box-shadow: 2px 2px 8px #999;
     width: 100%;
-
     
 }
+
 .fa-heart{
     color: red;
     margin: 5px;
@@ -163,6 +188,19 @@ body{
     gap: 3px;
 
 
+}
+
+.status button{
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.status button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .search-container input{
@@ -199,3 +237,173 @@ body{
 .fa-magnifying-glass:hover{
     color: orangered;
 }
+
+.Error-handling{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+}
+
+.shimmer-card{
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 244px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+
+
+}
+
+.shimmer-card:hover{
+    scale: 0.97;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.image-unit{
+    min-width: 213px;
+    max-width: 213px;
+    min-height: 135px;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px #888;
+    width: 100%;
+    align-content: space-around;
+    justify-content: space-around;
+
+}
+
+
+
+.name-unit, .rating-unit{
+    min-width: 197px;
+    max-width: 197px;
+    min-height: 23px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+
+}
+
+.name-unit{
+    min-width: 150px;
+    max-width: 150px;
+}
+
+
+ /* RESTURANT MENU CSS  */
+
+ .Resturant-menu{
+    min-height: 73vh;
+    width: 60%;
+    margin: auto;
+ }
+
+ .Res-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2px 20px 2px;
+
+ }
+
+.Res_name{
+    font-size: 1.43rem;
+    font-weight: 600;
+    color: #282c3f;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.Res_cusi{
+    font-size: .93rem;
+    color: #7e808c;
+    height: calc(0.93rem + 2px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.Res_area{
+    font-size: .93rem;
+    color: #7e808c;
+}
+
+.ResRating{
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.hr{
+    color: #888;
+    height: 0.1px;
+    outline: none;
+
+}
+
+.ResAvgRating{
+    color: #3d9b6d;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.Res_ToalRating{
+    font-size: 11px;
+    color: #8b8d97;
+    font-family: ProximaNovaCondensedRegular,arial,Helvetica Neue,sans-serif;
+    font-weight: 600;
+}
+
+.Line{
+    border: none;
+    border-bottom: 1px dashed #d3d3d3;
+}
+
+.ResHeader{
+    padding: 20px 2px 20px 2px;
+    font-weight: 900;
+    color: #333;
+
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.Rupee {
+    margin-right: 10px;
+    border: 1.5px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 50%;
+    /* Add the following CSS to make the element an exact circle */
+    width: height;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+
+  }
+
+
+
+  
+
