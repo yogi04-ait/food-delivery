@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Title } from "./title";
+import { Title } from "./Title.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 //  Header component  for header section: Logo nav items
@@ -8,12 +8,12 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="header">
+    <div className=" nav-items flex justify-between border-b border-custom-gray shadow-md sticky top-0 mb-5 z-10 bg-white w-full">
       <Title />
 
-      <div className="nav-items">
-        <ul>
-          <Link to="/">
+      <div>
+        <ul className="flex p-5 pt-11 flex-row list-none gap-5 ">
+          <Link to="/" className=" no-underline ">
             <li>Home</li>
           </Link>
 
@@ -24,7 +24,7 @@ const Header = () => {
           <li>
             <i className="fa-solid fa-cart-shopping"></i>
           </li>
-          <div className="status">
+          <div className="border-none bg-transparent text-[15px] font-medium transform transition-all duration-200 hover:scale-110 hover:cursor-pointer">
             {isLoggedIn ? (
               <button onClick={() => setIsLoggedIn(false)}>Logout</button>
             ) : (
