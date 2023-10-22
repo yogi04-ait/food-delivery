@@ -4,9 +4,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantsMenu";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+
 // Header
 //     -Logo
 //     -NavItems (Right Side)
@@ -53,7 +55,11 @@ const appRouter = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/restraunt/:resid", // restaurants
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restaurant/:resId", // restaurants
         element: <RestaurantMenu />,
       },
     ],

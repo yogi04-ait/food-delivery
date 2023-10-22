@@ -10,9 +10,8 @@ const Header = () => {
   return (
     <div className=" nav-items flex justify-between border-b border-custom-gray shadow-md sticky top-0 mb-5 z-10 bg-white w-full">
       <Title />
-
       <div>
-        <ul className="flex p-5 pt-11 flex-row list-none gap-5 ">
+        <ul className="flex p-5 pt-11 flex-row list-none gap-5 text-[15px] font-medium">
           <Link to="/" className=" no-underline ">
             <li>Home</li>
           </Link>
@@ -20,7 +19,9 @@ const Header = () => {
           <Link to="/about">
             <li>About</li>
           </Link>
-          <li>Contact</li>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
           <li>
             <i className="fa-solid fa-cart-shopping"></i>
           </li>

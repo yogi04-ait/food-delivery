@@ -5,12 +5,12 @@ const ResturantCard = ({
   name,
   cuisines,
   areaName,
-  avgRating,
+  avgRatingString,
 }) => {
   return (
     <div className="text-left max-w-[220px] min-w-[220px] m-2 hover:scale-95 transition-all duration-300 cursor-pointer ">
       <img
-        className="rounded-xl shadow-sm  w-full content-around justify-around "
+        className="rounded-xl shadow-sm  w-full content-around justify-around"
         src={IMG_CDN_URL + cloudinaryImageId}
       />
 
@@ -22,7 +22,7 @@ const ResturantCard = ({
           <span className="bg-green-600 rounded-full p-1.5 text-xs flex items-center justify-center text-white">
             <i class="fa-solid fa-star"></i>
           </span>
-          {avgRating}
+          {avgRatingString}
         </h4>
         <p className="whitespace-nowrap text-ellipsis overflow-hidden ">
           {cuisines?.join(", ")}
