@@ -2,11 +2,11 @@
   "name": "food-delivery",
   "version": "1.0.0",
   "description": "Online food delivery web app",
-  "main": "src/index.html",
+  "main": "index.html",
   "scripts": {
     "test": "jest",
-    "start": "parcel src/index.html",
-    "build": "npx parcel build src/index.html"
+    "start": "parcel index.html",
+    "build": "npx parcel build index.html"
   },
   "repository": {
     "type": "git",
