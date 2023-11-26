@@ -1,6 +1,6 @@
 import ResturantCard from "./ResturantCard";
 import { swiggy_api_URL } from "../constants";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useRef} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
@@ -11,11 +11,12 @@ function filterData(searchTxt, ...restaurants) {
   console.log(resFilterData);
   return resFilterData;
 }
-
 const Body = () => {
   const [searchTxt, setSearchTxt] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const noOfclicks = useRef(0);
+  console.log(noOfclicks.current);
 
   useEffect(() => {
     getRestaurants();
@@ -52,7 +53,7 @@ const Body = () => {
           onClick={() => {
             // Need to filter data
             const data = filterData(searchTxt, ...allRestaurants);
-
+            
             //  Set filtered data
             setFilteredRestaurants(data);
           }}

@@ -19,7 +19,7 @@ const Shimmer = () => {
           .map((_e, index) => (
             <div
               key={index}
-              className="min-w-[220px] max-w-[220px] min-h-[244px] bg-white flex flex-col m-2.5 space-y-2.5 transform transition-all duration-200 hover:scale-97 hover:cursor-pointer;
+              className="min-w-[220px] max-w-[220px] min-h-[244px] bg-white flex flex-col m-2.5 space-y-2.5 transform transition-all duration-200 hover:scale-97 animate-pulse hover:cursor-pointer
               "
             >
               <div

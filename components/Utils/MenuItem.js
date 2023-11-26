@@ -22,15 +22,15 @@ const MenuItem = ({ item }) => {
 
   return (
     <div
-      className="flex justify-between basis-[848px] max-h-[180px] p-5 border-b border-gray"
+      className="flex justify-between p-5 border-b border-gray"
       key={id}
     >
-      <div className="flex flex-col basis-[400px]">
-        <h3 className="font-semibold text-lg w-3/5">{name}</h3>
-        <p className="mt-1 text-base font-normal">
+      <div className="flex flex-col ">
+        <h3 className="font-normal m-1 block text-lg w-3/5">{name}</h3>
+        <p className="mt-1 m-1 text-base font-normal">
           {price > 0 ? "₹ " + item?.price / 100 : " "}{" "}
         </p>
-        <p className="mt-3.5 leading-5 text-gray-desc w-4/5 text-sm overflow-hidden text-ellipsis mb-1 ">
+        <p className="mt-3.5 leading-5 text-gray-desc w-4/5 text-sm overflow-hidden text-ellipsis mb-1 m-1 block">
           {description}
         </p>
       </div>

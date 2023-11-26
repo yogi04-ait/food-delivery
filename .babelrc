@@ -1,0 +1,16 @@
+{
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-remove-console", {
+          "exclude": ["warn"]
+        }],
+        ["filter-imports", {
+          "imports": {
+            "global": ["alert"]
+          }
+        }]
+      ]
+    }
+  }
+}

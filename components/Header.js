@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Title } from "./Title.js";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 //  Header component  for header section: Logo nav items
 
 const Header = () => {

@@ -26,7 +26,7 @@ const RestaurantItemCategory = ({ itemCategory }) => {
         )}
       </div>
       {isVisible && (
-        <div className="flex flex-col justify-evenly">
+        <div className="flex flex-col justify-evenly block p-2">
           {itemCategory.itemCards.map((item) => (
             <MenuItem key={item.id} item={item.card.info} />
           ))}
