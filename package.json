@@ -3,7 +3,6 @@
   "homepage": "https://github.com/yogi04-ait/food-delivery#readme",
   "version": "1.0.0",
   "description": "Online food delivery web app",
-  "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -16,6 +15,7 @@
     "url": "git+https://github.com/yogi04-ait/food-delivery.git"
   },
   "author": "Yogesh Aithani",
+  "source":"index.html",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yogi04-ait/food-delivery/issues"
