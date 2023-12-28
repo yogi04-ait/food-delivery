@@ -38,7 +38,7 @@ We are committed to enhancing your experience. Here are some areas we are active
 
 To experience our app locally, follow these simple steps:
 
-1. **Clone the Repository:** `git clone [https://github.com/yogi04-ait/food-delivery.git]`
+1. **Clone the Repository:** `git clone https://github.com/yogi04-ait/food-delivery.git`
 2. **Initialize NPM:** `npm init`
 3. **Start the App:** `npm start`
 4. Ensure you have the CORS extension installed in your browser.
