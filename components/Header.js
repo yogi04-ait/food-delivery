@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { Title } from "./Title.js";
 import { useState } from "react";
+import { useSelector } from "react-redux/es/hooks/useSelector.js";
 // import { Link } from "react-router-dom";
 //  Header component  for header section: Logo nav items
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const cartItems = useSelector(store => store.cart.items);
 
   return (
     <div className=" nav-items flex justify-between border-b border-custom-gray shadow-md sticky top-0 mb-5 z-10 bg-white w-full">
@@ -22,8 +24,13 @@ const Header = () => {
           <Link to="/contact">
             <li>Contact</li>
           </Link>
+          <Link to="/cart">
           <li>
             <i className="fa-solid fa-cart-shopping"></i>
+          </li>
+          </Link>
+          <li>
+            <i>{cartItems.length}-item</i>
           </li>
           <div className="border-none bg-transparent text-[15px] font-medium transform transition-all duration-200 hover:scale-110 hover:cursor-pointer">
             {isLoggedIn ? (

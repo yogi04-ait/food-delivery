@@ -9,6 +9,7 @@ const ResturantCard = ({
 }) => {
   return (
     <div className="text-left max-w-[220px] min-w-[220px] m-2 hover:scale-95 transition-all duration-300 cursor-pointer ">
+      
       <img
         className="rounded-xl shadow-sm  w-full content-around justify-around"
         src={IMG_CDN_URL + cloudinaryImageId}

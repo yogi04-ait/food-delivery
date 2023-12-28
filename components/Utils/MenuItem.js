@@ -2,22 +2,28 @@
 // import { useDispatch, useSelector } from "react-redux";
 import { ITEM_IMG_CDN } from "../../constants";
 import { useState } from "react";
+import { addItem, removeItem } from "./cartSlice";
+import { useDispatch } from "react-redux";
 
 const MenuItem = ({ item }) => {
   const { id, name, description, price, imageId } = item;
+  const dispatch = useDispatch();
 
-  console.log(description);
 
   const [itemCount, setItemCount] = useState(0);
 
   const handleAddItem = (item) => {
     setItemCount(itemCount + 1);
+    dispatch(addItem(item));
+    console.log(item);
   };
 
   const handleRemoveItem = (id) => {
-    let updatedCount;
-    updatedCount = itemCount > 0 ? itemCount - 1 : 0;
-    setItemCount(updatedCount);
+    if(itemCount > 0 ){
+      setItemCount(itemCount-1);
+      dispatch(removeItem(id))
+    }
+    
   };
 
   return (
@@ -42,7 +48,7 @@ const MenuItem = ({ item }) => {
             alt={item?.name}
           />
         )}
-        <div className=" flex justify-evenly items-center w-[100px] h-[34px] mt-2.5 text-gray-count outline-none border bg-white border-gray rounded-md relative bottom-8">
+        <div className="flex justify-evenly items-center w-[100px] h-[34px] mt-2.5 text-gray-count outline-none border bg-white border-gray rounded-md relative bottom-8">
           <button
             className="text-xl text-gray-count font-semibold rounded-sm"
             onClick={() => handleRemoveItem(id)}

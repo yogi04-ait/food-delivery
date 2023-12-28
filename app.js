@@ -5,9 +5,12 @@ import Footer from "./components/Footer";
 import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantsMenu";
+import { Provider } from "react-redux";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import store from "./components/Utils/store";
 
 // Header
 //     -Logo
@@ -31,11 +34,11 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const Applayout = () => {
   return (
-    <>
+    < Provider store={store}>
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </Provider>
   );
 };
 
@@ -57,6 +60,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/restaurant/:resId", // restaurants

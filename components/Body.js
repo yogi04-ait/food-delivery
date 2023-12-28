@@ -53,7 +53,7 @@ const Body = () => {
           onClick={() => {
             // Need to filter data
             const data = filterData(searchTxt, ...allRestaurants);
-            
+        
             //  Set filtered data
             setFilteredRestaurants(data);
           }}

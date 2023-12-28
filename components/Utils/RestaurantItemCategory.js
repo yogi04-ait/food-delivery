@@ -4,7 +4,6 @@ import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 
 const RestaurantItemCategory = ({ itemCategory }) => {
   const [isVisible, setIsVisible] = useState(true);
-  console.log(itemCategory.title);
 
   const toggleView = () => {
     setIsVisible(!isVisible);
@@ -26,7 +25,7 @@ const RestaurantItemCategory = ({ itemCategory }) => {
         )}
       </div>
       {isVisible && (
-        <div className="flex flex-col justify-evenly block p-2">
+        <div className="flex flex-col justify-evenly  p-2">
           {itemCategory.itemCards.map((item) => (
             <MenuItem key={item.id} item={item.card.info} />
           ))}
